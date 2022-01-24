@@ -69,20 +69,52 @@ body {
     display: flex;
     justify-content: center;
 }
-.icons img {
+.icons i {
     width: 50px !important;
     height: 50px;
     color: white;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    font-family: 'Font Awesome 5 Brands'
+}
+.icons i::before{
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 1rem;
+    transition: ease-in-out 0.3s;
+}
+.icons i:hover::before{
+    color: var(--soft-magenta);
+    border-color: var(--soft-magenta);
+    
+}
+.icons i:nth-child(1)::before{
+    padding: 1rem 1.12rem
 }
 
 @media (min-width: 1200px){
+    body {
+        background-image: url(/images/bg-desktop.svg);
+    }
     .main{
         max-width: 1600px;
         width: 90%; 
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+    }
+    .icons i::before{
+        border-radius: 50%;
+        border: 2px solid white;
+        padding: 1rem;
+        transition: ease-in-out 0.3s;
+    }
+    .icons i:hover::before{
+        color: var(--soft-magenta);
+        border-color: var(--soft-magenta);
+        
+    }
+    .icons:nth-child(1)::before{
+        padding: 1rem 2rem;
     }
     .half:nth-child(2){
         text-align: left;
