@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: url(/images/bg-mobile.svg);
+    background-image: url(../images/bg-mobile.svg);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -69,7 +69,7 @@ body {
     display: flex;
     justify-content: center;
 }
-.icons i {
+.icons i::before {
     width: 50px !important;
     height: 50px;
     color: white;
@@ -93,7 +93,7 @@ body {
 
 @media (min-width: 1200px){
     body {
-        background-image: url(/images/bg-desktop.svg);
+        background-image: url(../images/bg-desktop.svg);
     }
     .main{
         max-width: 1600px;
@@ -102,20 +102,7 @@ body {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
-    .icons i::before{
-        border-radius: 50%;
-        border: 2px solid white;
-        padding: 1rem;
-        transition: ease-in-out 0.3s;
-    }
-    .icons i:hover::before{
-        color: var(--soft-magenta);
-        border-color: var(--soft-magenta);
-        
-    }
-    .icons:nth-child(1)::before{
-        padding: 1rem 2rem;
-    }
+    
     .half:nth-child(2){
         text-align: left;
         align-items: flex-end;
